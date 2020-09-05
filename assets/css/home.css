@@ -1,3 +1,8 @@
+body {
+   background-image: url("../images/background.jpeg");
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
 .home {
    text-align: center;
    margin-top: 6%;
@@ -24,7 +29,42 @@
    height: 30px;
    width: 150px;
    margin-top: 20px;
-   margin-left: 35px;
+   margin-left: 210px;
    font-size: 15px;
    cursor: pointer;
+}
+.sign-up {
+   height: 350px;
+}
+.sign-up h1 {
+   margin-left: 225px;
+}
+.sign-in h1 {
+   margin-left: 225px;
+}
+.home-btn {
+   width: 50%;
+   height: 100px;
+   /* background-color: rgba(253, 250, 250, 0.74); */
+   margin-left: 340px;
+   margin-top: 75px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.home-btn button {
+   width: 42%;
+   border: none;
+   border-radius: 5px;
+   box-shadow: 4px 5px #888888;
+}
+
+.home-btn a {
+   font-size: 30px;
+   text-decoration: none;
+}
+
+a:link,
+a:visited {
+   color: black;
 }
