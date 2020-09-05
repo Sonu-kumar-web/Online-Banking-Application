@@ -1,0 +1,30 @@
+.home {
+   text-align: center;
+   margin-top: 6%;
+   font-size: 20px;
+}
+
+.sign-in {
+   width: 40%;
+   height: 250px;
+   background-color: rgba(253, 250, 250, 0.74);
+   margin-left: 30%;
+   box-shadow: 4px 6px #888888;
+   border-radius: 10px;
+}
+
+.input {
+   height: 30px;
+   width: 300px;
+   margin-left: 130px;
+   margin-top: 20px;
+   display: block;
+}
+.submit {
+   height: 30px;
+   width: 150px;
+   margin-top: 20px;
+   margin-left: 35px;
+   font-size: 15px;
+   cursor: pointer;
+}
