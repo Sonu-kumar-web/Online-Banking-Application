@@ -17,7 +17,6 @@ passport.use(
                return done(err);
             }
             if (!user || user.password != password) {
-               req.flash("error", "Invalid Username/Password"); // For flash messages
                return done(null, false);
             }
             return done(null, user);

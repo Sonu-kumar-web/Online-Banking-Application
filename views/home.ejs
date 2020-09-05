@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/home.css" />
 
+<% if (!locals.user){ %>
 <div class="home">
    <h1><%= message %></h1>
 </div>
@@ -7,3 +8,5 @@
    <button><a href="/users/sign-in">Login</a></button>
    <button><a href="/users/sign-up">SignUp</a></button>
 </div>
+
+<% } %>

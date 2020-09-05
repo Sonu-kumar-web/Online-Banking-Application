@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/home.css" />
+
+<link rel="stylesheet" href="/css/profile.css" />
+
+<div class="container">
+   <div class="welcome">
+      <marquee
+         ><h2>
+            Welcome to Online Banking Application <%= user.name %>
+         </h2></marquee
+      >
+   </div>
+
+   <div class="detail">
+      <label>Account Holder:</label>
+      <input type="text" value="<%= user.name %> " readonly /><br />
+      <label>Email:</label>
+      <input type="text" value="<%= user.email %> " readonly /><br />
+      <label>Account Number:</label>
+      <input type="text" value="<%= user.accountNumber %> " readonly /><br />
+      <label>Balance:</label>
+      <input type="text" value="<%= user.balance %> " readonly />
+   </div>
+</div>

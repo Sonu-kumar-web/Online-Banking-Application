@@ -9,6 +9,8 @@ const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 
+const MongoStore = require("connect-mongo")(session);
+
 const cookieParser = require("cookie-parser");
 // for encode POST request
 app.use(express.urlencoded());
@@ -53,6 +55,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(passport.setAuthenticatedUser);
 
 // Use express router
 app.use("/", require("./routes"));

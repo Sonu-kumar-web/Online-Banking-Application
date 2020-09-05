@@ -17,11 +17,9 @@ const userSchema = new mongoose.Schema(
       },
       accountNumber: {
          type: Number,
-         required: true,
       },
       balance: {
          type: Number,
-         required: true,
       },
    },
    {

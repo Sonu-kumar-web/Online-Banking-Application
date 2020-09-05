@@ -1,0 +1,27 @@
+.container {
+   width: 60%;
+   height: 400px;
+   background-color: rgb(202, 202, 202);
+   margin: auto;
+   box-shadow: 4px 6px #888888;
+   border-radius: 10px;
+}
+.welcome {
+   color: darkblue;
+}
+
+.detail {
+   display: flex;
+   flex-direction: column;
+}
+
+.detail input {
+   border: none;
+   height: 25px;
+   padding-left: 8px;
+}
+
+.detail label {
+   font-weight: bold;
+   padding-left: 8px;
+}
