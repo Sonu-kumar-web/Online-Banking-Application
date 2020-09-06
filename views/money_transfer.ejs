@@ -36,9 +36,19 @@
                name="transfer"
                value="One-time fund transfer"
             />
-            <label for="One-time fund transfer">One-time fund transfer</label>
-            <input type="radio" name="transfer" value="Scheduled payment" />
-            <label for="Scheduled payments">Scheduled payments</label>
+
+            <label for="One-time fund transfer" class="radio-label"
+               >One-time fund transfer</label
+            >
+
+            <div class="select-payment">
+               <select name="One-time fund transfer" id="">
+                  <option value="daily">Daily</option>
+                  <option value="Weekly">Weekly</option>
+                  <option value="quarterly">Quarterly</option>
+               </select>
+               <label for="Scheduled payments">Scheduled payments</label>
+            </div>
          </div>
          <label for="password" class="label">Password:</label>
          <input

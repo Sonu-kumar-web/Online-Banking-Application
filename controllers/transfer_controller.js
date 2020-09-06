@@ -17,42 +17,45 @@ module.exports.update = async function (req, res) {
             return res.redirect("back");
          }
 
-         // console.log("req.body.password:", req.body.password);
-         // console.log("req.user.password:", req.user.password);
+         if (req.body.transfer == "One-time fund transfer") {
+            let user = await User.findOne({
+               accountNumber: req.body.account_number,
+            });
 
-         let user = await User.findOne({
-            accountNumber: req.body.account_number,
-         });
+            if (user.name != req.body.account_holder_name) {
+               console.log("Invalid Account number or password");
+               return res.redirect("back");
+            }
+            if (user) {
+               if (req.user.balance < req.body.amount) {
+                  console.log("Insufficient Balance");
+                  return res.redirect("back");
+               } else {
+                  // initial balance
+                  let my_amount = req.user.balance;
 
-         if (user.name != req.body.account_holder_name) {
-            console.log("Invalid Account number or password");
+                  let transfer_amount = req.body.amount;
+
+                  // final balance
+                  my_amount = my_amount - transfer_amount;
+
+                  let your_amount =
+                     parseInt(transfer_amount) + parseInt(user.balance);
+
+                  // Update my balance
+                  req.user.balance = my_amount;
+
+                  user.balance = your_amount;
+               }
+            }
+            req.user.save();
+            user.save();
+            return res.redirect("/users/profile", {
+               message: "Your money is Successfully Transfer!",
+            });
+         } else {
             return res.redirect("back");
          }
-         if (user) {
-            if (req.user.balance < req.body.amount) {
-               console.log("Insufficient Balance");
-               return res.redirect("back");
-            } else {
-               // initial balance
-               let my_amount = req.user.balance;
-
-               let transfer_amount = req.body.amount;
-
-               // final balance
-               my_amount = my_amount - transfer_amount;
-
-               let your_amount =
-                  parseInt(transfer_amount) + parseInt(user.balance);
-
-               // Update my balance
-               req.user.balance = my_amount;
-
-               user.balance = your_amount;
-            }
-         }
-         req.user.save();
-         user.save();
-         return res.redirect("/users/profile");
       } catch (error) {
          return res.redirect("back");
       }
