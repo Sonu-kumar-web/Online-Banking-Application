@@ -5,6 +5,7 @@
    margin: auto;
    box-shadow: 4px 6px #888888;
    border-radius: 10px;
+   margin-top: 5%;
 }
 .welcome {
    color: darkblue;
@@ -24,4 +25,26 @@
 .detail label {
    font-weight: bold;
    padding-left: 8px;
+}
+
+.transfer-btn img {
+   height: 20px;
+}
+
+.transfer-btn a {
+   font-size: 27px;
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   padding: 10px;
+}
+
+.transfer-btn {
+   width: 300px;
+   margin: auto;
+   border-radius: 20px;
+}
+.transfer-btn button {
+   border-radius: 10px;
+   width: 320px;
 }

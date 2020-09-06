@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/money_transfer.css" />
+
+<div class="money_transfer_detail_container">
+   <form action="/transfer/update/<%= profile_user.id %>" method="POST">
+      <div class="from-detail">
+         <label for="account holder name" class="label"
+            >Account holder's name:</label
+         >
+         <input
+            type="text"
+            name="account_holder_name"
+            placeholder="Enter Account holder's name"
+            required
+            class="input-type"
+         />
+         <label for="account number" class="label">Account Number:</label>
+         <input
+            type="text"
+            name="account_number"
+            placeholder="Enter Account Number"
+            required
+            class="input-type"
+         />
+         <label for="amount" class="label">Amount:</label>
+         <input
+            type="number"
+            name="amount"
+            placeholder="Enter Amount"
+            required
+            class="input-type"
+         />
+         <div class="radio">
+            <input
+               type="radio"
+               name="transfer"
+               value="One-time fund transfer"
+            />
+            <label for="One-time fund transfer">One-time fund transfer</label>
+            <input type="radio" name="transfer" value="Scheduled payment" />
+            <label for="Scheduled payments">Scheduled payments</label>
+         </div>
+         <label for="password" class="label">Password:</label>
+         <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            class="input-type"
+         />
+         <input type="submit" value="Send" class="btn" />
+      </div>
+   </form>
+</div>

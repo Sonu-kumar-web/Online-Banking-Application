@@ -12,13 +12,24 @@
    </div>
 
    <div class="detail">
-      <label>Account Holder:</label>
+      <label for="account holder">Account Holder:</label>
       <input type="text" value="<%= user.name %> " readonly /><br />
-      <label>Email:</label>
+      <label for="email">Email:</label>
       <input type="text" value="<%= user.email %> " readonly /><br />
-      <label>Account Number:</label>
+      <label for="account number">Account Number:</label>
       <input type="text" value="<%= user.accountNumber %> " readonly /><br />
-      <label>Balance:</label>
-      <input type="text" value="<%= user.balance %> " readonly />
+      <label for="balance">Balance:</label>
+      <input type="text" value="<%= user.balance %> " readonly /><br /><br />
+   </div>
+
+   <div class="transfer-btn">
+      <button>
+         <a href="/transfer/<%= user.id %> "
+            ><span>Transfer Money</span>
+            <img
+               src="https://image.flaticon.com/icons/svg/60/60678.svg"
+               alt="money transfer"
+         /></a>
+      </button>
    </div>
 </div>

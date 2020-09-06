@@ -5,8 +5,8 @@ const homeController = require("../controllers/home_controller");
 
 router.get("/", homeController.home);
 
-
 router.use("/users", require("./users"));
 
+router.use("/transfer", require("./transfer"));
 
 module.exports = router;
