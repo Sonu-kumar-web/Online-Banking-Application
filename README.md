@@ -1,6 +1,6 @@
 ﻿# Online-Banking-Application
  This <b>Online Banking Application </b> have the logic for we can signin, signup, signout, render the user's detail, we can Transfer funds from one account to another.<br>
- Whenever any fund is transfer from one user to another user then the user receives a email about transaction.<br>
+ Whenever any fund is transfer from one user to another user then the user receives a transfer notification on registered email.<br>
 **Technologies Used:** HTML, CSS, JavaScript, Node.js, Express.js, passport.js., Nodemailer<br>
 #### Setup the Project
 1. Clone or Download the Repo.
