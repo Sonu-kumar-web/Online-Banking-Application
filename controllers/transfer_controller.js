@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const transferMailer = require("../mailers/transfer_mailer");
 
 module.exports.transfer = (req, res) => {
    User.findById(req.params.id, function (err, user) {
@@ -50,9 +51,12 @@ module.exports.update = async function (req, res) {
             }
             req.user.save();
             user.save();
-            return res.redirect("/users/profile", {
-               message: "Your money is Successfully Transfer!",
-            });
+
+            // Send the email
+            user = await user.populate("user", "name email").execPopulate();
+            transferMailer.newTransfer(user);
+
+            return res.redirect("/users/profile");
          } else {
             return res.redirect("back");
          }
