@@ -1,4 +1,4 @@
-﻿# Online-Banking-Application
+﻿# Online-Banking-Application (Assignment given by ProtectPay)
  This <b>Online Banking Application </b> have the logic for we can signin, signup, signout, render the user's detail, we can Transfer funds from one account to another.<br>
  Whenever any fund is transfer from one user to another user then the user receives a transfer notification on registered email.<br>
 **Technologies Used:** HTML, CSS, JavaScript, Node.js, Express.js, passport.js., Nodemailer<br>
